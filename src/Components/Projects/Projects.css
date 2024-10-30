@@ -1,0 +1,87 @@
+/* Projects Section */
+#projects {
+    padding: 5rem 0;
+    background-color: #f9fafb;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Container */
+  #projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Section Heading */
+  #projects h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #1a202c;
+  }
+  
+  /* Project Cards Grid */
+  #projects .grid {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    #projects .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    #projects .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Project Cards */
+  .project-card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Hover Effect */
+  .project-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+  
+  /* Project Title */
+  .project-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1a202c;
+  }
+  
+  /* Project Description */
+  .project-card p {
+    color: #718096;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Tag Styles */
+  .project-card .tag {
+    background-color: #ebf8ff;
+    color: #2b6cb0;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    white-space: nowrap;
+  }
+  
+  /* Flex Layout for Tags */
+  .project-card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  

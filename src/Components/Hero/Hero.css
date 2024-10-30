@@ -1,0 +1,76 @@
+/* Hero Section Styles */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 4rem;
+    background: linear-gradient(to bottom, #ebf8ff, #ffffff);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Container */
+  .hero .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Text Centering */
+  .hero .text-center {
+    text-align: center;
+  }
+  
+  /* Headings */
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a202c;
+  }
+  
+  @media (min-width: 768px) {
+    .hero h1 {
+      font-size: 5rem;
+    }
+  }
+  
+  /* Subheadings */
+  .hero p {
+    margin-bottom: 1rem;
+  }
+  
+  .hero p:nth-of-type(1) {
+    font-size: 1.25rem;
+    color: #718096;
+  }
+  
+  .hero p:nth-of-type(2) {
+    font-size: 1.125rem;
+    color: #4a5568;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  
+  /* Button Styles */
+  .hero a {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+  }
+  
+  .hero a:hover {
+    background-color: #1d4ed8;
+  }
+  
+  /* Responsive Padding Adjustments */
+  @media (min-width: 1024px) {
+    .hero {
+      padding-top: 8rem;
+    }
+  }
+  

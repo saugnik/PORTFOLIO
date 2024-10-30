@@ -1,0 +1,77 @@
+/* Contact Section */
+#contact {
+    padding: 5rem 0;
+    background-color: #f9fafb;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Container */
+  #contact .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Section Heading */
+  #contact h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #1a202c;
+  }
+  
+  @media (min-width: 768px) {
+    #contact h2 {
+      font-size: 3rem;
+    }
+  }
+  
+  /* Contact Cards */
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Hover Effect */
+  .contact-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+  
+  /* Icon Styling */
+  .contact-card svg {
+    color: #2563eb;
+  }
+  
+  /* Headings inside Cards */
+  .contact-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #1a202c;
+  }
+  
+  /* Description Text */
+  .contact-card p {
+    color: #718096;
+    margin: 0;
+  }
+  
+  /* Responsive Grid */
+  #contact .grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    #contact .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
