@@ -25,7 +25,7 @@ const Projects = () => {
     },
     {
       title: "Aerothon 2024",
-      description: "Completed ADAS and CFD in Ansys.",
+      description: "Completed ADAS and CFD in Ansys. AIR 26",
       tags: ["CFD", "ML", "Raspberry Pi 5"]
     },
     {
@@ -35,7 +35,7 @@ const Projects = () => {
     },
     {
       title: "DDC 2024",
-      description: "Developed a Fixed-wing plane ",
+      description: "Developed a Fixed-wing plane. AIR 24 ",
       tags: ["CAD", "CAE & CFD"]
     },
   ];
