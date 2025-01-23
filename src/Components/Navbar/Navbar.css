@@ -1,82 +1,95 @@
+/* General Styling */
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #ffffff;
+  --text-color: #333333;
+  --hover-color: #3e8e41;
+}
+
 body {
-  font-family: Arial, sans-serif; /* Change to your preferred font */
   margin: 0;
-  padding: 0;
-  background-color: #f8f9fa; /* Background color for the page */
+  font-family: Arial, sans-serif;
 }
 
-.Dropdown {
+/* Navbar Styling */
+.navbar {
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
   display: flex;
-  justify-content: center; /* Centers the navigation items */
-  align-items: center; /* Aligns items vertically */
-  padding: 20px;
-  background-color: white; /* Background color for the navbar */
+  justify-content: space-between;
+  align-items: center;
 }
 
-.About_Nabvar {
-  border: 2px solid blue; /* Blue border around buttons */
-  border-radius: 5px; /* Rounded corners */
-  padding: 10px 20px; /* Vertical and horizontal padding */
-  margin: 0 10px; /* Space between buttons */
-  background-color: white; /* Background color for buttons */
-  color: blue; /* Text color */
-  text-decoration: none; /* Remove underline from links */
-  font-weight: bold; /* Bold text */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+.navbar-title {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
 }
 
-.About_Navbar:hover {
-  background-color: blue; /* Background color on hover */
-  color: white; /* Text color on hover */
+/* Desktop Links */
+.navbar-links {
+  display: flex;
+  gap: 20px;
 }
 
-.Skills_Nabvar {
-  border: 2px solid blue; /* Blue border around buttons */
-  border-radius: 5px; /* Rounded corners */
-  padding: 10px 20px; /* Vertical and horizontal padding */
-  margin: 0 10px; /* Space between buttons */
-  background-color: white; /* Background color for buttons */
-  color: blue; /* Text color */
-  text-decoration: none; /* Remove underline from links */
-  font-weight: bold; /* Bold text */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+.navbar-link {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.Skills_Navbar:hover {
-  background-color: blue; /* Background color on hover */
-  color: white; /* Text color on hover */
+.navbar-link:hover {
+  background-color: var(--hover-color);
+  color: var(--secondary-color);
 }
 
-.Experience_Nabvar {
-  border: 2px solid blue; /* Blue border around buttons */
-  border-radius: 5px; /* Rounded corners */
-  padding: 10px 20px; /* Vertical and horizontal padding */
-  margin: 0 10px; /* Space between buttons */
-  background-color: white; /* Background color for buttons */
-  color: blue; /* Text color */
-  text-decoration: none; /* Remove underline from links */
-  font-weight: bold; /* Bold text */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+/* Mobile Menu */
+.navbar-toggle {
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+  cursor: pointer;
+  display: none; /* Hidden on desktop */
 }
 
-.Experience_Navbar:hover {
-  background-color: blue; /* Background color on hover */
-  color: white; /* Text color on hover */
+.navbar-toggle:focus {
+  outline: none;
 }
 
-.Projects_Nabvar {
-  border: 2px solid blue; /* Blue border around buttons */
-  border-radius: 5px; /* Rounded corners */
-  padding: 10px 20px; /* Vertical and horizontal padding */
-  margin: 0 10px; /* Space between buttons */
-  background-color: white; /* Background color for buttons */
-  color: blue; /* Text color */
-  text-decoration: none; /* Remove underline from links */
-  font-weight: bold; /* Bold text */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+.navbar-links.active {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.Projects_Navbar:hover {
-  background-color: blue; /* Background color on hover */
-  color: white; /* Text color on hover */
+.navbar-links.active .navbar-link {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Hidden by default */
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
 }

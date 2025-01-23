@@ -1,36 +1,47 @@
-import React, { useState } from 'react';
-import { Menu } from 'lucide-react';
-import './Navbar.css';
+import React, { useState } from "react";
+import { Menu } from "lucide-react";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsMobileMenuOpen((prev) => !prev);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
   };
 
   return (
-    <nav className="body">
-      <div className="Box">
-        <div className="Buttom">
-          <h1 className="Name">Saugnik Aich</h1>
-          
-
-          {/* Mobile Menu Toggle Button */}
-          <button className="hidden_tab" onClick={toggleMobileMenu}>
+    <nav className="navbar">
+      <div className="navbar-container">
+        <div className="navbar-header">
+          <h1 className="navbar-title">Saugnik Aich</h1>
+          <button
+            className="navbar-toggle"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
             <Menu size={24} />
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="Dropdown">
-            <a href="#about" className="About_Navbar">About</a>
-            <a href="#experience" className="Experience_Navbar">Experience</a>
-            <a href="#projects" className="Projects_Navbar">Projects</a>
-            <a href="#skills" className="Skills_Navbar">Skills</a>
-          </div>
-        )}
+        {/* Desktop Menu */}
+        <div className={`navbar-links ${isMobileMenuOpen ? "active" : ""}`}>
+          <a href="#about" className="navbar-link" onClick={closeMobileMenu}>
+            About
+          </a>
+          <a href="#experience" className="navbar-link" onClick={closeMobileMenu}>
+            Experience
+          </a>
+          <a href="#projects" className="navbar-link" onClick={closeMobileMenu}>
+            Projects
+          </a>
+          <a href="#skills" className="navbar-link" onClick={closeMobileMenu}>
+            Skills
+          </a>
+        </div>
       </div>
     </nav>
   );
