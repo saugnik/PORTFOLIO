@@ -5,8 +5,8 @@ const Projects = () => {
   const projects = [
     {
       title: "IEEE-IAS Website",
-      description: "Developed college website using JavaScript, CSS, HTML frontend with Django, Python, MongoDB backend",
-      tags: ["JavaScript", "Django", "MongoDB"]
+      description: "Developed college website using JavaScript, CSS, HTML frontend with Python, MongoDB backend",
+      tags: ["JavaScript", "React", "MongoDB"]
     },
     {
       title: "Automatic Attendance Recorder",
@@ -20,14 +20,19 @@ const Projects = () => {
     },
     {
       title: "URC 2025",
-      description: "Participating in URC 2025 with a focus on CAE simulation and Ansys.",
-      tags: ["CAE", "Simulation", "Ansys"]
+      description: "Participating in URC 2026 with a focus on CAE and ROS2.",
+      tags: ["CAE", "ROS2", "SLAM"]
     },
     {
       title: "Aerothon 2024",
-      description: "Completed ADAS and CFD simulation in Ansys.",
-      tags: ["Ansys", "TensorFlow", "Raspberry Pi 5"]
-    }
+      description: "Completed ADAS and CFD in Ansys.",
+      tags: ["CFD", "ML", "Raspberry Pi 5"]
+    },
+    {
+      title: "AI: Survillance Robot",
+      description: "Developed a survillance robot with object detection capabilities and made it autonomous.",
+      tags: ["ROS2", "ML", "SLAM"]
+    },
   ];
 
   return (

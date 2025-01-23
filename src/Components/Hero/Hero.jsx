@@ -17,8 +17,8 @@ const Hero = () => (
         <p className="Branch">
           Electrical Engineer & Computer Science Enthusiast
         </p>
-        <p className="Fpga-Work">
-          Specializing in embedded systems, FPGA/ASIC design, and robotics. 
+        <p className="ML-Work">
+          Specializing in AIML, ROS2, SLAM, robotics. 
           Passionate about the intersection of hardware and software.
         </p>
         <div className="Contact_name">
