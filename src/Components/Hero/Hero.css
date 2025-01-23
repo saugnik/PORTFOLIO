@@ -1,76 +1,87 @@
-/* Hero Section Styles */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 4rem;
-    background: linear-gradient(to bottom, #ebf8ff, #ffffff);
-    font-family: 'Arial', sans-serif;
+/* Hero.css */
+
+.Hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.Hero > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+}
+
+.My_photo {
+  margin-bottom: 20px;
+}
+
+.Avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.Name&branch h1 {
+  font-size: 36px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.Branch {
+  font-size: 18px;
+  color: #555;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.Fpga-Work {
+  font-size: 16px;
+  color: #666;
+  max-width: 500px;
+  margin: 15px 0 25px;
+  line-height: 1.6;
+}
+
+.Contact_name {
+  margin-top: 20px;
+}
+
+.Contact {
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #0077b6;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.Contact:hover {
+  background-color: #005f87;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Hero {
+    padding: 40px 15px;
   }
-  
-  /* Container */
-  .hero .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+
+  .Name&branch h1 {
+    font-size: 28px;
   }
-  
-  /* Text Centering */
-  .hero .text-center {
-    text-align: center;
+
+  .Branch {
+    font-size: 16px;
   }
-  
-  /* Headings */
-  .hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #1a202c;
+
+  .Fpga-Work {
+    font-size: 14px;
   }
-  
-  @media (min-width: 768px) {
-    .hero h1 {
-      font-size: 5rem;
-    }
-  }
-  
-  /* Subheadings */
-  .hero p {
-    margin-bottom: 1rem;
-  }
-  
-  .hero p:nth-of-type(1) {
-    font-size: 1.25rem;
-    color: #718096;
-  }
-  
-  .hero p:nth-of-type(2) {
-    font-size: 1.125rem;
-    color: #4a5568;
-    max-width: 640px;
-    margin: 0 auto;
-  }
-  
-  /* Button Styles */
-  .hero a {
-    display: inline-block;
-    background-color: #2563eb;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-weight: 600;
-  }
-  
-  .hero a:hover {
-    background-color: #1d4ed8;
-  }
-  
-  /* Responsive Padding Adjustments */
-  @media (min-width: 1024px) {
-    .hero {
-      padding-top: 8rem;
-    }
-  }
-  
+}

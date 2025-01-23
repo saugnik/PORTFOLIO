@@ -17,24 +17,31 @@ const Projects = () => {
       title: "World Robotics Championship",
       description: "Developing an automated farming robot with CAD simulation and IoT automation capabilities",
       tags: ["Robotics", "IoT", "CAD"]
+    },
+    {
+      title: "URC 2025",
+      description: "Participating in URC 2025 with a focus on CAE simulation and Ansys.",
+      tags: ["CAE", "Simulation", "Ansys"]
+    },
+    {
+      title: "Aerothon 2024",
+      description: "Completed ADAS and CFD simulation in Ansys.",
+      tags: ["Ansys", "TensorFlow", "Raspberry Pi 5"]
     }
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="projects" className="Projects">
+      <div className="Total-body">
+        <h2>Projects</h2>
+        <div className="Project_box">
           {projects.map((project, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6">
-              <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-              <p className="text-gray-600 mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
+            <div key={index} className="project-card">
+              <h3 className="project-title">{project.title}</h3>
+              <p className="project-description">{project.description}</p>
+              <div className="project-tags">
                 {project.tags.map((tag, tagIndex) => (
-                  <span 
-                    key={tagIndex} 
-                    className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full"
-                  >
+                  <span key={tagIndex} className="project-tag">
                     {tag}
                   </span>
                 ))}

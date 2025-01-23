@@ -1,25 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Menu } from 'lucide-react';
 import './Navbar.css';
 
-const Navbar = () => (
-  <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm">
-    <div className="container mx-auto px-4 py-3">
-      <div className="flex justify-between items-center">
-        <h1 className="text-xl font-bold text-blue-600">Saugnik Aich</h1>
-        <div className="hidden md:flex space-x-6">
-          <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
-          <a href="#experience" className="hover:text-blue-600 transition-colors">Experience</a>
-          <a href="#projects" className="hover:text-blue-600 transition-colors">Projects</a>
-          <a href="#skills" className="hover:text-blue-600 transition-colors">Skills</a>
-          <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
+const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  return (
+    <nav className="body">
+      <div className="Box">
+        <div className="Buttom">
+          <h1 className="Name">Saugnik Aich</h1>
+          
+
+          {/* Mobile Menu Toggle Button */}
+          <button className="hidden_tab" onClick={toggleMobileMenu}>
+            <Menu size={24} />
+          </button>
         </div>
-        <button className="md:hidden">
-          <Menu size={24} />
-        </button>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="Dropdown">
+            <a href="#about" className="About_Navbar">About</a>
+            <a href="#experience" className="Experience_Navbar">Experience</a>
+            <a href="#projects" className="Projects_Navbar">Projects</a>
+            <a href="#skills" className="Skills_Navbar">Skills</a>
+          </div>
+        )}
       </div>
-    </div>
-  </nav>
-);
+    </nav>
+  );
+};
 
 export default Navbar;

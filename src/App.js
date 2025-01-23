@@ -5,6 +5,7 @@ import Experience from './Components/Experience/Experience';
 import Skills from './Components/Skills/Skills';
 import Projects from './Components/Projects/Projects';
 import Contact from './Components/Contact/Contact';
+import Diamond from './../src/Components/1000148477.jpg';
 
 
 const App = () => {

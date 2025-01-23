@@ -19,16 +19,16 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">Work Experience</h2>
-        <div className="max-w-3xl mx-auto space-y-8">
+    <section id="experience" className="Experience">
+      <div className="Experience.body">
+        <h2 className="Work-experience word">Work Experience</h2>
+        <div>
           {experiences.map((exp, index) => (
-            <div key={index} className="border-l-4 border-blue-600 pl-4 hover:shadow-lg transition-shadow p-4 rounded">
-              <h3 className="text-xl font-semibold">{exp.company}</h3>
-              <p className="text-blue-600">{exp.role}</p>
-              <p className="text-gray-600 text-sm">{exp.period}</p>
-              <p className="mt-2 text-gray-700">{exp.description}</p>
+            <div key={index} className="Index">
+              <h3>{exp.company}</h3>
+              <p>{exp.role}</p>
+              <p>{exp.period}</p>
+              <p>{exp.description}</p>
             </div>
           ))}
         </div>
