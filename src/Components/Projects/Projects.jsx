@@ -5,7 +5,7 @@ const Projects = () => {
   const projects = [
     {
       title: "IEEE-IAS Website",
-      description: "Developed college website using JavaScript, CSS, HTML frontend with Python, MongoDB backend",
+      description: "Developed college website using React frontend with Python, MongoDB backend",
       tags: ["JavaScript", "React", "MongoDB"]
     },
     {
