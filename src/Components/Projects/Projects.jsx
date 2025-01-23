@@ -10,7 +10,7 @@ const Projects = () => {
     },
     {
       title: "Automatic Attendance Recorder",
-      description: "Built with Raspberry Pi 5, integrating deep learning for face recognition in Circuit Analysis lab",
+      description: "Built with Raspberry Pi 4b, integrating deep learning for face recognition",
       tags: ["Deep Learning", "Raspberry Pi", "Python"]
     },
     {
@@ -32,6 +32,11 @@ const Projects = () => {
       title: "AI: Survillance Robot",
       description: "Developed a survillance robot with object detection capabilities and made it autonomous.",
       tags: ["ROS2", "ML", "SLAM"]
+    },
+    {
+      title: "DDC 2024",
+      description: "Developed a Fixed-wing plane ",
+      tags: ["CAD", "CAE & CFD"]
     },
   ];
 
