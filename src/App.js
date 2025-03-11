@@ -6,12 +6,13 @@ import Experience from "./Components/Experience";
 import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
+import Emails from "./Components/Emails";
 
 const App = () => {
   const [showLanding, setShowLanding] = useState(true);
 
   const handleEnter = () => {
-    setShowLanding(false); // Hide Landing Page and Show Main App
+    setShowLanding(false); 
   };
 
   return (
