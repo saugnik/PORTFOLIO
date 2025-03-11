@@ -1,22 +1,33 @@
-import React from 'react';
-import Navbar from './Components/Navbar/Navbar';
-import Hero from './Components/Hero/Hero';
-import Experience from './Components/Experience/Experience';
-import Skills from './Components/Skills/Skills';
-import Projects from './Components/Projects/Projects';
-import Contact from './Components/Contact/Contact';
-import Diamond from './../src/Components/1000148477.jpg';
-
+import React, { useState } from "react";
+import LandingPage from "./Components/LandingPage";
+import Navbar from "./Components/Navbar";
+import Hero from "./Components/Hero";
+import Experience from "./Components/Experience";
+import Skills from "./Components/Skills";
+import Projects from "./Components/Projects";
+import Contact from "./Components/Contact";
 
 const App = () => {
+  const [showLanding, setShowLanding] = useState(true);
+
+  const handleEnter = () => {
+    setShowLanding(false); // Hide Landing Page and Show Main App
+  };
+
   return (
-    <div className="min-h-screen">
-        <Navbar/>
-        <Hero/>
-        <Experience/>
-        <Skills/>
-        <Projects/>
-        <Contact/>
+    <div>
+      {showLanding ? (
+        <LandingPage onEnter={handleEnter} />
+      ) : (
+        <>
+          <Navbar />
+          <Hero />
+          <Experience />
+          <Skills />
+          <Projects />
+          <Contact />
+        </>
+      )}
     </div>
   );
 };
