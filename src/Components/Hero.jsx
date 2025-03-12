@@ -1,10 +1,16 @@
 import React from "react";
-import Diamond from '../Components/1000148477.jpg';
-
+import Diamond from "../Components/1000148477.jpg";
+import herobg from "../Components/mainpgbackground.jpg"; 
 
 const Hero = () => (
-  <section className="flex flex-col items-center justify-center text-center py-16 px-6 bg-gray-900 text-white">
-    <div className="flex flex-col items-center space-y-6">
+  <section 
+    className="relative flex flex-col items-center justify-center text-center py-16 px-6 text-white bg-cover bg-center bg-no-repeat"
+    style={{ backgroundImage: `url(${herobg})` }}
+  >
+    {/* Dark Overlay for better visibility */}
+    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <div className="relative flex flex-col items-center space-y-6">
       {/* Profile Image */}
       <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-blue-500 shadow-lg">
         <img src={Diamond} alt="Avatar" className="w-full h-full object-cover" />
