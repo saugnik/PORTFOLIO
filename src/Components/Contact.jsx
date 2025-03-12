@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Mail, Linkedin, MapPin, Phone } from "lucide-react";
+import { Mail, Linkedin, MapPin, Phone, Github } from "lucide-react";
 
 const Contact = () => {
   useEffect(() => {
@@ -37,6 +37,15 @@ const Contact = () => {
             <div>
               <h3 className="text-lg font-semibold">LinkedIn</h3>
               <p className="text-gray-600">Connect with me</p>
+            </div>
+          </a>
+
+          {/* ✅ Corrected GitHub Profile Section */}
+          <a href="https://github.com/saugnik" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-white shadow-md rounded-lg hover:shadow-lg transition">
+            <Github size={24} className="text-gray-900" />
+            <div>
+              <h3 className="text-lg font-semibold">GitHub</h3>
+              <p className="text-gray-600">View my projects</p>
             </div>
           </a>
 

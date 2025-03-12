@@ -7,6 +7,7 @@ import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Emails from "./Components/Emails";
+import Slider from "./Components/Slider";
 
 const App = () => {
   const [showLanding, setShowLanding] = useState(true);
@@ -26,6 +27,7 @@ const App = () => {
           <Experience />
           <Skills />
           <Projects />
+          <Slider />
           <Contact />
         </>
       )}
