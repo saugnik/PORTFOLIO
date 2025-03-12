@@ -5,7 +5,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 
-// Import images correctly
 const images = [
   require("./assets/slider1.jpg"),
   require("./assets/slider2.jpg"),
@@ -14,7 +13,7 @@ const images = [
 
 const Slider = () => {
   return (
-    <div className="w-full max-w-5xl mx-auto my-10 px-4">
+    <div id="slider" className="w-full max-w-5xl mx-auto my-10 px-4 pt-20">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         spaceBetween={30}
