@@ -37,13 +37,10 @@ const Chatbot = () => {
     "what is your experience?": "He has several years of experience in software development, AI, and robotics, working on diverse projects.",
     "do you have a blog?": "Yes, Saugnik occasionally writes about his projects and tech insights on his personal blog.",
 
-
     "what are your future plans?": "He aims to further develop his skills in AI and robotics and lead innovative projects that push the boundaries of technology.",
     "what inspires you?": "He is inspired by technology's potential to transform lives and the challenges that drive innovation.",
 
-
     "how can i contact saugnik?": "You can reach out via email at saugnikaich123@gmail.com or connect on LinkedIn.",
-
 
     "bye": "Goodbye! Have a great day!",
     "goodbye": "Goodbye! It was nice chatting with you.",
@@ -53,6 +50,15 @@ const Chatbot = () => {
 
     "default": "I'm sorry, I don't have an answer for that. Can you ask something else?"
   };
+
+  const faqSuggestions = [
+    "Who is Saugnik?",
+    "What does Saugnik do?",
+    "Tell me about Saugnik's projects",
+    "What are your skills?",
+    "What technologies do you use?",
+    "How can I contact Saugnik?"
+  ];
 
   const handleSendMessage = () => {
     if (!input.trim()) return;
@@ -66,17 +72,40 @@ const Chatbot = () => {
     setInput("");
   };
 
+  const handleSuggestionClick = (question) => {
+    setInput(question);
+    setTimeout(() => handleSendMessage(), 200);
+  };
+
   return (
-    <div>
+    <div className="fixed bottom-4 right-4 z-50">
       {isOpen ? (
-        <div className="fixed bottom-4 right-4 w-80 bg-white shadow-lg rounded-lg border">
-          <div className="bg-blue-600 text-white p-2 flex justify-between items-center rounded-t-lg">
-            <span className="font-bold">Chatbot</span>
+        <div className="w-80 bg-white border rounded-lg shadow-lg flex flex-col">
+          <div className="flex justify-between items-center p-2 bg-blue-500 text-white rounded-t-lg">
+            <h2 className="text-sm font-semibold">Chat with Saugnik's Bot</h2>
             <button onClick={() => setIsOpen(false)}>
-              <X size={20} />
+              <X size={18} />
             </button>
           </div>
+
           <div className="p-2 h-60 overflow-y-auto">
+            {/* FAQ Suggestions */}
+            <div className="mb-2">
+              <p className="font-semibold mb-1 text-sm">Try asking:</p>
+              <div className="flex flex-wrap gap-1">
+                {faqSuggestions.map((q, i) => (
+                  <button
+                    key={i}
+                    onClick={() => handleSuggestionClick(q)}
+                    className="text-xs bg-blue-100 hover:bg-blue-200 text-blue-700 px-2 py-1 rounded-full"
+                  >
+                    {q}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Chat messages */}
             {messages.map((msg, i) => (
               <div key={i} className={`mb-2 ${msg.sender === "user" ? "text-right" : "text-left"}`}>
                 <span className={`inline-block px-2 py-1 rounded ${msg.sender === "user" ? "bg-blue-500 text-white" : "bg-gray-300 text-black"}`}>
@@ -85,26 +114,31 @@ const Chatbot = () => {
               </div>
             ))}
           </div>
-          <div className="p-2 flex">
+
+          {/* Input Section */}
+          <div className="flex border-t p-2">
             <input
               type="text"
-              className="flex-grow border rounded-l px-2 py-1"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
-              placeholder="Ask me something..."
+              onKeyDown={(e) => e.key === "Enter" && handleSendMessage()}
+              placeholder="Type your message..."
+              className="flex-grow px-2 py-1 border rounded-l focus:outline-none text-sm"
             />
-            <button onClick={handleSendMessage} className="bg-blue-500 text-white px-3 py-1 rounded-r">
-              <Send size={20} />
+            <button
+              onClick={handleSendMessage}
+              className="bg-blue-500 hover:bg-blue-600 text-white px-3 rounded-r"
+            >
+              <Send size={16} />
             </button>
           </div>
         </div>
       ) : (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition"
+          className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg"
         >
-          <MessageCircle size={24} />
+          <MessageCircle />
         </button>
       )}
     </div>

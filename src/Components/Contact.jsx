@@ -32,7 +32,7 @@ const Contact = () => {
             </div>
           </a>
 
-          <a href="https://linkedin.com/in/saugnik-aich-8a4323281" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-white shadow-md rounded-lg hover:shadow-lg transition">
+          <a href="https://www.linkedin.com/company/ieee-ias-iem/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-white shadow-md rounded-lg hover:shadow-lg transition">
             <Linkedin size={24} className="text-blue-700" />
             <div>
               <h3 className="text-lg font-semibold">LinkedIn</h3>
