@@ -23,6 +23,7 @@ const Navbar = () => {
           className="lg:hidden text-white"
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
+          
         >
           <Menu size={28} />
         </button>
